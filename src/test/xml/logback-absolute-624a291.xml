@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="https://raw.github.com/nathansgreen/logback-XSD/624a29135e347ca0aa409d8057d23162a6f56366/src/main/xsd/logback_0.9.30.xsd">
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d %5p | %t | %-55logger{55} | %m %n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="test.myapp.repos">
+		<level value="INFO" />
+	</logger>
+
+	<logger name="org.springframework">
+		<level value="INFO" />
+	</logger>
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+</configuration>
